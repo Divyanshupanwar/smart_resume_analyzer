@@ -25,12 +25,10 @@ def setup_database():
     try:
         connection = pymysql.connect(host=DB_HOST, user=DB_USER, password=DB_PASSWORD)
         cursor = connection.cursor()
+        cursor.execute(f"CREATE DATABASE IF NOT EXISTS {DB_NAME};")
+        connection.select_db(DB_NAME)
         
-        # Create database if not exists
-        cursor.execute("CREATE DATABASE IF NOT EXISTS SRA;")
-        connection.select_db("sra")
-        
-        # Create user_data table with additional 'selected' column
+        # Create table
         cursor.execute("""
         CREATE TABLE IF NOT EXISTS user_data (
             ID INT NOT NULL AUTO_INCREMENT,
