@@ -1,0 +1,13 @@
+nltk==3.9.1
+numpy==2.3.0
+pandas==2.3.0
+pdfminer==20191125
+Pillow==11.2.1
+plotly==6.1.2
+pymysql==1.1.1
+PyPDF2==3.0.1
+scikit_learn==1.7.0
+spacy==3.8.7
+streamlit==1.45.1
+streamlit_tags==1.2.8
+yt_dlp==2025.6.9
