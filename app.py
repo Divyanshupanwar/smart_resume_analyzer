@@ -2,6 +2,9 @@ import streamlit as st
 from PIL import Image
 import os
 import time
+import nltk
+nltk.download('punkt', quiet=True)
+nltk.download('stopwords', quiet=True)
 
 # Import modules from our refactored structure
 from utils.file_utils import show_pdf
