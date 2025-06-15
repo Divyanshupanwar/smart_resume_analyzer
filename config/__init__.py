@@ -1,8 +1,10 @@
-# Configuration constants can be defined here
-DB_HOST = 'localhost'
-DB_USER = 'root'
-DB_PASSWORD = 'div230111017@'
-DB_NAME = 'sra'
+# Configuration constants for the online MySQL database (freesqldatabase.com)
+
+DB_HOST = 'sql12.freesqldatabase.com'
+DB_USER = 'sql12784861'
+DB_PASSWORD = '5qilebqMfs'  # 🔒 Replace with the real password you set
+DB_NAME = 'sql12784861'
+
 
 # Paths
 UPLOAD_FOLDER = './Uploaded_Resumes/'
