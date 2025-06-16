@@ -2,6 +2,15 @@ import streamlit as st
 from PIL import Image
 import os
 import time
+import nltk
+# Use a safe directory for downloads
+nltk_data_path = os.path.join(os.path.expanduser("~"), "nltk_data")
+nltk.data.path.append(nltk_data_path)
+
+# Download required corpora silently
+nltk.download('punkt', download_dir=nltk_data_path, quiet=True)
+nltk.download('stopwords', download_dir=nltk_data_path, quiet=True)
+
 # Import modules from our refactored structure
 from utils.file_utils import show_pdf
 from utils.db_utils import setup_database, create_db_connection
