@@ -2,12 +2,6 @@ import streamlit as st
 from PIL import Image
 import os
 import time
-import nltk
-
-# Download both required corpora to a Streamlit-compatible path
-nltk.download('punkt', download_dir='/home/adminuser/nltk_data')
-nltk.download('stopwords', download_dir='/home/adminuser/nltk_data')
-nltk.data.path.append('/home/adminuser/nltk_data')
 # Import modules from our refactored structure
 from utils.file_utils import show_pdf
 from utils.db_utils import setup_database, create_db_connection
