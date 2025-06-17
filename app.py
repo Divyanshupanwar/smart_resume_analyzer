@@ -3,13 +3,12 @@ from PIL import Image
 import os
 import time
 import nltk
-# Use a safe directory for downloads
+
+# 👇 Cloud-safe download path for nltk resources
 nltk_data_path = os.path.join(os.path.expanduser("~"), "nltk_data")
 nltk.data.path.append(nltk_data_path)
-
-# Download required corpora silently
-nltk.download('punkt', download_dir=nltk_data_path, quiet=True)
-nltk.download('stopwords', download_dir=nltk_data_path, quiet=True)
+nltk.download("punkt", download_dir=nltk_data_path)
+nltk.download("stopwords", download_dir=nltk_data_path)
 
 # Import modules from our refactored structure
 from utils.file_utils import show_pdf
